@@ -354,7 +354,7 @@ const GasRefundForRelayerMessage = "gas refund for relayer"
 // InitialVersionOfTransaction defines the initial version for a transaction
 const InitialVersionOfTransaction = uint32(1)
 
-// DefaultAddressPrefix is the default hrp of MultiversX/Numbat
+// DefaultAddressPrefix is the default hrp of DharitrI/Numbat
 const DefaultAddressPrefix = "drt"
 
 // TopicRequestSuffix represents the topic name suffix for requests

@@ -9,7 +9,7 @@ import (
 // EnableEpochFlag defines a flag specific to the enableEpochs.toml
 type EnableEpochFlag string
 
-// CheckHandlerCompatibility checks if the provided handler is compatible with this mx-chain-core-go version
+// CheckHandlerCompatibility checks if the provided handler is compatible with this drt-go-chain-core version
 func CheckHandlerCompatibility(handler EnableEpochsHandler, requiredFlags []EnableEpochFlag) error {
 	if check.IfNil(handler) {
 		return ErrNilEnableEpochsHandler
