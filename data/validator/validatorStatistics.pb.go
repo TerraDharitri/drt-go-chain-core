@@ -834,10 +834,7 @@ func (m *ValidatorStatistics) Unmarshal(dAtA []byte) error {
 			if err != nil {
 				return err
 			}
-			if skippy < 0 {
-				return ErrInvalidLengthValidatorStatistics
-			}
-			if (iNdEx + skippy) < 0 {
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
 				return ErrInvalidLengthValidatorStatistics
 			}
 			if (iNdEx + skippy) > l {
