@@ -25,8 +25,6 @@ func GetHeaderBytesAndType(marshaller marshal.Marshalizer, headerHandler data.He
 		headerType = core.MetaHeader
 	case *block.Header:
 		headerType = core.ShardHeaderV1
-	case *block.SovereignChainHeader:
-		headerType = core.SovereignChainHeader
 	default:
 		return nil, "", errInvalidHeaderType
 	}
@@ -47,6 +45,20 @@ func GetBody(bodyHandler data.BodyHandler) (*block.Body, error) {
 	}
 
 	return body, nil
+}
+
+// GetHeaderProof converts the HeaderProofHandler to HeaderProof struct
+func GetHeaderProof(headerProofHandler data.HeaderProofHandler) (*block.HeaderProof, error) {
+	if check.IfNilReflect(headerProofHandler) {
+		return nil, errNilHeaderProof
+	}
+
+	proof, castOk := headerProofHandler.(*block.HeaderProof)
+	if !castOk {
+		return nil, errCannotCastHeaderProof
+	}
+
+	return proof, nil
 }
 
 // ConvertPubKeys converts a map<shard, validators> into a map<shard, validatorsProtoMessage>
