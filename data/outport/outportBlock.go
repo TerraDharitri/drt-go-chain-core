@@ -1,4 +1,4 @@
-//go:generate protoc -I=. -I=$GOPATH/src/github.com/TerraDharitri/drt-go-chain-core/data/block -I=$GOPATH/src -I=$GOPATH/src/github.com/TerraDharitri/protobuf/protobuf --gogoslick_out=$GOPATH/src outportBlock.proto
+//go:generate protoc -I=. -I=$GOPATH/src/github.com/TerraDharitri/drt-go-chain-core/data/block -I=$GOPATH/src -I=$GOPATH/src/github.com/dharitri/protobuf/protobuf --gogoslick_out=$GOPATH/src outportBlock.proto
 
 package outport
 
