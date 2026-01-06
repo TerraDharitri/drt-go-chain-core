@@ -75,6 +75,7 @@ func TestBech32PubkeyConverter_DecodeWrongSizeShouldErr(t *testing.T) {
 
 	assert.Equal(t, 0, len(str))
 	assert.True(t, errors.Is(err, pubkeyConverter.ErrWrongSize))
+
 }
 
 func TestBech32PubkeyConverter_SilentEncodeShouldWork(t *testing.T) {
