@@ -1,6 +1,8 @@
 module github.com/TerraDharitri/drt-go-chain-core
 
-go 1.23.7
+go 1.23.6
+
+replace github.com/gogo/protobuf => github.com/TerraDharitri/protobuf v0.0.1
 
 require (
 	github.com/btcsuite/btcd/btcutil v1.1.3
@@ -21,5 +23,3 @@ require (
 	google.golang.org/protobuf v1.26.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
-
-replace github.com/gogo/protobuf => github.com/TerraDharitri/protobuf v0.0.1
