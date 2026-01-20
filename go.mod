@@ -1,6 +1,6 @@
 module github.com/TerraDharitri/drt-go-chain-core
 
-go 1.23.6
+go 1.23
 
 replace github.com/gogo/protobuf => github.com/TerraDharitri/protobuf v0.0.1
 
