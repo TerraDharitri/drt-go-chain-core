@@ -35,7 +35,7 @@ func (scr *SmartContractResult) SetSndAddr(addr []byte) {
 }
 
 // GetRcvUserName returns the receiver user name from the smart contract result
-func (_ *SmartContractResult) GetRcvUserName() []byte {
+func (*SmartContractResult) GetRcvUserName() []byte {
 	return nil
 }
 

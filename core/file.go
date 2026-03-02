@@ -212,11 +212,7 @@ func LoadAllKeysFromPemFile(relativePath string) ([][]byte, []string, error) {
 	privateKeys := make([][]byte, 0)
 	publicKeys := make([]string, 0)
 
-	for {
-		if len(buff) == 0 {
-			break
-		}
-
+	for len(buff) > 0 {
 		blkRecovered, buff = pem.Decode(buff)
 		if blkRecovered == nil {
 			return nil, nil, fmt.Errorf("%w while reading %s file, error decoding", ErrPemFileIsInvalid, relativePath)

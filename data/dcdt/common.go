@@ -81,7 +81,7 @@ func IsTickerValid(ticker string) bool {
 
 // IsTokenTickerLenCorrect checks if the token ticker len is correct
 func IsTokenTickerLenCorrect(tokenTickerLen int) bool {
-	return !(tokenTickerLen < minLengthForTickerName || tokenTickerLen > maxLengthForTickerName)
+	return tokenTickerLen >= minLengthForTickerName && tokenTickerLen <= maxLengthForTickerName
 }
 
 // IsRandomSeqValid checks if the token random sequence is valid
